@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <title>Location</title>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	</head>
+
+	<body>
+    <div class="container">
+        <div class="col-md-8 col-md-offset-2">
+		<h1>Locations</h1>
+        <form action="/location" method="post" class="form">
+            <label>Name: <input type="text" name="name" class="form-control"/></label><br/>
+            <label>Category: <select name="category" class="form-control">
+					<option value="University" selected>University</option>
+					<option value="Park">Park</option>
+					<option value="Hospital">Hospital</option>
+                    <option value="Restaurant">Restaurant</option>
+                    <option value="School">School</option>
+                    <option value="Other">Other</option>
+			</select> </label><br/>
+            <label>Latitude: <input type="text" name="latitude" class="form-control"/></label><br/>
+            <label>Longitude: <input type="text" name="longitude" class="form-control"/></label><br/>
+            <input type="submit" value="Add Location" class="btn btn-primary"/>
+            <input type="hidden" name="_csrf" value="{{csrftoken}}"/>
+        </form>
+        </div>
+    </div> 
+	</body>
+</html>

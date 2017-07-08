@@ -1,0 +1,29 @@
+{
+  "name": "myapp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "@reactivex/rxjs": "^5.4.1",
+    "body-parser": "^1.17.2",
+    "consolidate": "^0.14.5",
+    "cookie-parser": "^1.4.3",
+    "crypto": "0.0.3",
+    "crypto-js": "^3.1.9-1",
+    "csurf": "^1.9.0",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "express-session": "^1.15.3",
+    "express-validator": "^3.2.0",
+    "jade": "~1.11.0",
+    "mongodb": "^2.2.29",
+    "mongoskin": "^2.1.0",
+    "morgan": "^1.8.2",
+    "node-fetch": "^1.7.1",
+    "nodemon": "^1.11.0",
+    "serve-favicon": "^2.4.3",
+    "swig": "^1.4.2"
+  }
+}
