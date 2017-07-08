@@ -26,10 +26,11 @@ router.post('/',function(req, res, next) {
     req.assert('longitude', 'Please insert the longitude of the location.').notEmpty();
     let errors = req.validationErrors();
     if (errors) res.render('error', {message: errors});
-    let query={name:req.body.location.name,
-                category:req.body.location.category,
-                latitude:req.body.location.latitude,
-                longitude:req.body.location.longitude}; 
+    let query={ name: req.body.name,
+                category:req.body.category,
+                latitude:req.body.latitude,
+                longitude:req.body.longitude}; 
+    console.dir(query);
     req.db.collection('locations').insert(query,function(err, data){
         if(err) res.render('error',{message: err});
         else{
